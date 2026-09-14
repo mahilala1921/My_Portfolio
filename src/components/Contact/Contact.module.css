@@ -97,11 +97,11 @@
 
 .socialLinks {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  overflow: visible;
 }
 
 .socialButton {
@@ -109,10 +109,10 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   min-width: 0;
   height: 48px;
-  padding: 0 1.25rem;
+  padding: 0 1rem;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.07);
   color: var(--text-light);
@@ -122,7 +122,9 @@
   text-decoration: none;
   line-height: 1.2;
   transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
   position: relative;
   z-index: 2;
 }
@@ -233,6 +235,7 @@
 input,
 textarea {
   width: 100%;
+  box-sizing: border-box;
   min-height: 3rem;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -242,6 +245,7 @@ textarea {
   font: inherit;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow-wrap: break-word;
 }
 
 textarea {
@@ -274,4 +278,13 @@ textarea::placeholder {
   .formCard {
     padding: 1.75rem;
   }
+
+  .form button {
+    width: 100%;
+  }
+}
+
+.form button {
+  max-width: 100%;
+  box-sizing: border-box;
 }

@@ -10,6 +10,10 @@
   cursor: pointer;
   font-weight: 600;
   transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.25s ease;
+
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .button:hover {
