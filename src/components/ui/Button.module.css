@@ -52,3 +52,22 @@
   box-shadow: 0 22px 42px rgba(124, 49, 255, 0.22);
   border-color: rgba(138, 70, 255, 0.45);
 }
+
+/* shared sizing for button pairs to ensure equal widths/heights */
+.pair {
+  flex: 0 0 220px; /* default desktop width for pair buttons */
+  max-width: 100%;
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .pair {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}

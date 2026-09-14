@@ -4,6 +4,11 @@
   align-items: flex-start;
 }
 
+/* allow wrapper to adopt pair sizing when needed */
+.pairWrapper {
+  display: inline-flex;
+}
+
 .icon {
   margin-right: 0.6rem;
   display: inline-block;

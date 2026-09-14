@@ -65,6 +65,21 @@
   margin-top: 2.75rem;
 }
 
+/* helper to apply the pair sizing class to hero layout */
+.pair {
+  display: inline-flex;
+}
+
+.cvWrapper {
+  display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  .actions {
+    gap: 0.75rem;
+  }
+}
+
 .heroImage {
   display: grid;
   place-items: center;

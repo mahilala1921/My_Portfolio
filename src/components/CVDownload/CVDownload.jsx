@@ -55,9 +55,10 @@ export function CVDownload() {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${styles.pairWrapper}`}>
       <Button
         variant="secondary"
+        className="pair"
         onClick={handleDownload}
         disabled={isDownloading}
         aria-disabled={isDownloading}

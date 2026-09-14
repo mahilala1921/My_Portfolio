@@ -33,6 +33,7 @@ export function Hero() {
         <div className={styles.actions}>
           <Button
             variant="primary"
+            className={styles.pair}
             onClick={() => {
               const el = document.getElementById('projects')
               if (el) el.scrollIntoView({ behavior: 'smooth' })
@@ -40,7 +41,9 @@ export function Hero() {
           >
             View Projects
           </Button>
-          <CVDownload />
+          <div className={styles.cvWrapper}>
+            <CVDownload />
+          </div>
         </div>
       </div>
       <div className={styles.heroImage} aria-hidden="true">
