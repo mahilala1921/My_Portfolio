@@ -65,6 +65,28 @@
   margin-top: 2.75rem;
 }
 
+/* Ensure paired buttons in the hero actions have the same explicit size (desktop)
+   Use :global to target the shared .pair class from Button.module.css only inside the hero actions. */
+.actions :global(.pair) {
+  flex: 0 0 320px; /* identical width */
+  min-width: 220px;
+  max-width: 100%;
+  height: 88px; /* explicit height ~80-90px */
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .actions :global(.pair) {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+    height: 56px; /* slightly smaller on mobile */
+  }
+}
+
 /* helper to apply the pair sizing class to hero layout */
 
 .cvWrapper {
