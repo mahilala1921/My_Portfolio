@@ -1,5 +1,6 @@
 import styles from './About.module.css'
 import aboutPhoto from '../../assets/about.jpeg'
+import buttonStyles from '../ui/Button.module.css'
 
 export function About() {
   return (
@@ -17,13 +18,31 @@ export function About() {
             thoughtful UI/UX design to create intuitive, user-focused digital
             experiences.
           </p>
-          <p className={styles.roles}>
-            <span>Frontend Development</span>
+          <div className={styles.roles}>
+            <span className={styles.roleItem}>Frontend Development</span>
             <span className={styles.dot}>•</span>
-            <span>UI/UX Design</span>
-            <span className={styles.dot}>•</span>
-            <span>Design Systems</span>
-          </p>
+            <span className={styles.roleItem}>UI/UX Design</span>
+            <span className={styles.designSystems}>Design Systems</span>
+          </div>
+
+          <div className={styles.aboutButtons}>
+            <a
+              href="https://github.com/mahilala1921"
+              className={`${buttonStyles.button} ${buttonStyles.secondary}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/mahlet-alemnew-engidaw-354aa7428"
+              className={`${buttonStyles.button} ${buttonStyles.secondary}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </section>
