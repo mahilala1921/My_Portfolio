@@ -2,6 +2,11 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
+  /* prevent wrapper from visually appearing as a large card when paired */
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
 }
 
 /* allow wrapper to adopt pair sizing when needed */
