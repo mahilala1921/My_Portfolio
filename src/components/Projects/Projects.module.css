@@ -138,6 +138,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  /* keep heading centered within the details column on desktop */
+  align-items: center;
 }
 
 .projectLabel {
@@ -159,6 +161,11 @@
   margin: 0;
   font-size: 2.15rem;
   color: var(--heading);
+  height: auto;
+  line-height: 1.12; /* ensure two wrapped lines never overlap */
+  white-space: normal;
+  word-break: break-word;
+  margin-bottom: 0.6rem; /* give space before description */
 }
 
 .details p {
