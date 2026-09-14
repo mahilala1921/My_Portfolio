@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './CVDownload.module.css'
+import buttonStyles from '../ui/Button.module.css'
 import { Button } from '../ui/Button'
 
 // Downloads /Mahlet_Alemnew_CV.pdf from the public folder.
@@ -58,7 +59,7 @@ export function CVDownload() {
     <div className={`${styles.wrapper} ${styles.pairWrapper}`}>
       <Button
         variant="secondary"
-        className="pair"
+        className={buttonStyles.pair}
         onClick={handleDownload}
         disabled={isDownloading}
         aria-disabled={isDownloading}

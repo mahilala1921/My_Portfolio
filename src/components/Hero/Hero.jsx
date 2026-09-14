@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './Hero.module.css'
+import buttonStyles from '../ui/Button.module.css'
 import { Button } from '../ui/Button'
 import CVDownload from '../CVDownload/CVDownload'
 import img1 from '../../assets/hero-user-1.png'
@@ -33,7 +34,7 @@ export function Hero() {
         <div className={styles.actions}>
           <Button
             variant="primary"
-            className={styles.pair}
+            className={buttonStyles.pair}
             onClick={() => {
               const el = document.getElementById('projects')
               if (el) el.scrollIntoView({ behavior: 'smooth' })
