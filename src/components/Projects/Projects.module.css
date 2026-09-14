@@ -241,3 +241,43 @@
     min-height: 260px;
   }
 }
+
+/* Mobile refinements for small phones */
+@media (max-width: 430px) {
+  .card {
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 20px;
+  }
+
+  .carousel {
+    height: 180px;
+  }
+
+  .details h3 {
+    font-size: clamp(1.05rem, 6vw, 1.5rem);
+    line-height: 1.12;
+    margin: 0;
+  }
+
+  .details p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .tags {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(0, max-content));
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .actions > * {
+    width: 100%;
+    min-width: 0;
+  }
+}
