@@ -84,32 +84,36 @@ export function Projects() {
             flow across departments.
           </p>
           <div className={styles.tags}>
-            <span>React</span>
-            <span>MySQL</span>
-            <span>Node.js</span>
-            <span>Express</span>
-            <span className={styles.tailwindTag}>Tailwind CSS</span>
+            <div className={styles.tagRow}>
+              <span>React</span>
+              <span>MySQL</span>
+              <span>Node.js</span>
+            </div>
+            <div className={styles.tagRow}>
+              <span>Express</span>
+              <span>Tailwind CSS</span>
+            </div>
           </div>
           <div className={styles.footerRow}>
             <span className={styles.role}>Role: Frontend Developer — UI Design & Implementation</span>
-              <div className={styles.actions}>
-                <a
-                  href="https://github.com/mahilala1921"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${buttonStyles.button} ${buttonStyles.secondary}`}
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://hrms-ui-emgn.onrender.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${buttonStyles.button} ${buttonStyles.primary}`}
-                >
-                  Live Demo
-                </a>
-              </div>
+            <div className={styles.actions}>
+              <a
+                href="https://github.com/mahilala1921"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${buttonStyles.button} ${buttonStyles.secondary} ${buttonStyles.pair}`}
+              >
+                GitHub
+              </a>
+              <a
+                href="https://hrms-ui-emgn.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${buttonStyles.button} ${buttonStyles.primary} ${buttonStyles.pair}`}
+              >
+                Live Demo
+              </a>
+            </div>
           </div>
         </div>
       </article>
