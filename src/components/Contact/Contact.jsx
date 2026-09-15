@@ -15,7 +15,7 @@ export function Contact() {
   const [statusType, setStatusType] = useState('') // 'success' | 'error' | ''
   const [isSending, setIsSending] = useState(false)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
 
     // basic validation
@@ -43,23 +43,26 @@ export function Contact() {
       to_email: 'mahilalalex27@gmail.com',
     }
 
-    emailjs
-      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
-      .then(
-        () => {
-          setStatusType('success')
-          setStatus('Message sent successfully!')
-          setName('')
-          setEmail('')
-          setMessage('')
-          setIsSending(false)
-        },
-        () => {
-          setStatusType('error')
-          setStatus('Oops! Something went wrong. Please try again later.')
-          setIsSending(false)
-        }
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
       )
+
+      setStatusType('success')
+      setStatus('Message sent successfully!')
+      setName('')
+      setEmail('')
+      setMessage('')
+    } catch (error) {
+      console.error('EmailJS send failed', error)
+      setStatusType('error')
+      setStatus('Oops! Something went wrong. Please try again later.')
+    } finally {
+      setIsSending(false)
+    }
   }
 
   const openTelegram = (event) => {
