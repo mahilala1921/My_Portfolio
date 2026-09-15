@@ -131,7 +131,7 @@ export function Contact() {
                 <p className={styles.infoTitle}>Social</p>
                 <div className={styles.socialLinks}>
                   <a href="https://github.com/mahilala1921" className={styles.socialButton} target="_blank" rel="noopener noreferrer">GitHub</a>
-                  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" className={styles.socialButton} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href="https://linkedin.com/in/mahlet-alemnew-engidaw-354aa7428" className={styles.socialButton} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   <div className={styles.socialButtonContainer}>
                     <a
                       href="https://t.me/enat217"

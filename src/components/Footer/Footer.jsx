@@ -5,7 +5,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.links}>
         <a href="https://github.com/mahilala1921" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://linkedin.com/in/mahlet-alemnew-engidaw-354aa7428" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="mailto:mahilalalex27@gmail.com">Email</a>
       </div>
 
