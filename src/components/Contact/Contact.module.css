@@ -141,6 +141,22 @@
   z-index: 1;
 }
 
+@media (max-width: 640px) {
+  .socialLinks {
+    flex-wrap: nowrap;
+  }
+
+  .socialButton,
+  .socialButtonContainer {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .socialButtonContainer .socialButton {
+    min-width: 0;
+  }
+}
+
 .buttonIcon {
   display: inline-flex;
   align-items: center;
