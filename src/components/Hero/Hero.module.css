@@ -60,26 +60,35 @@
 
 .actions {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
   gap: 1rem;
   margin-top: 2.75rem;
 }
 
-/* Ensure paired buttons in the hero actions have the same explicit size (desktop)
-   Use :global to target the shared .pair class from Button.module.css only inside the hero actions. */
-.actions :global(.pair) {
-  flex: 0 0 320px; /* identical width */
-  min-width: 220px;
-  max-width: 100%;
+/* Keep both Hero controls as equal-sized flex items. */
+.actions > button,
+.actions .cvWrapper button {
+  flex: 0 0 320px;
+  width: 320px;
   height: 88px; /* explicit height ~80-90px */
   box-sizing: border-box;
   display: inline-flex;
+  padding: 0 1.8rem;
   align-items: center;
   justify-content: center;
 }
 
 @media (max-width: 640px) {
-  .actions :global(.pair) {
+  .actions {
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .actions > button,
+  .actions .cvWrapper,
+  .actions .cvWrapper button {
     flex: 1 1 100%;
     width: 100%;
     min-width: 0;
@@ -87,34 +96,7 @@
   }
 }
 
-/* Force the actual button elements inside hero actions to exact identical size
-   This targets the rendered <button> elements (not wrappers) to avoid wrappers
-   creating larger cards. */
-.actions > button,
-.actions .pairWrapper > button,
-.actions .cvWrapper > button {
-  width: 320px;
-  height: 88px;
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1.8rem;
-}
-
-@media (max-width: 640px) {
-  .actions > button,
-  .actions .pairWrapper > button,
-  .actions .cvWrapper > button {
-    width: 100%;
-    height: 56px;
-    padding: 0 1rem;
-  }
-}
-
-/* Ensure wrappers around the CVDownload button do not create a larger card */
-.actions .cvWrapper,
-.actions .pairWrapper {
+.actions .cvWrapper {
   width: 320px;
   height: 88px;
   display: inline-flex;
@@ -127,9 +109,29 @@
   box-shadow: none;
 }
 
+.actions .cvWrapper > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions .cvWrapper > div button {
+  flex: 0 0 320px;
+  width: 320px;
+  height: 88px;
+}
+
 @media (max-width: 640px) {
-  .actions .cvWrapper,
-  .actions .pairWrapper {
+  .actions .cvWrapper {
+    width: 100%;
+    height: 56px;
+  }
+
+  .actions .cvWrapper > div button {
+    flex: 1 1 100%;
     width: 100%;
     height: 56px;
   }
@@ -142,12 +144,6 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-}
-
-@media (max-width: 640px) {
-  .actions {
-    gap: 0.75rem;
-  }
 }
 
 .heroImage {
