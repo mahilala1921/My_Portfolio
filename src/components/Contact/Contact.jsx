@@ -3,9 +3,9 @@ import emailjs from '@emailjs/browser'
 import styles from './Contact.module.css'
 import { Button } from '../ui/Button'
 
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_SERVICE_ID = 'service_q83wajl'
 const EMAILJS_TEMPLATE_ID = 'template_8fkox9i'
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const EMAILJS_PUBLIC_KEY = 'oXOdHgAIQagzo1054'
 
 export function Contact() {
   const [name, setName] = useState('')
