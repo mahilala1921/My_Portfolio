@@ -3,9 +3,9 @@ import emailjs from '@emailjs/browser'
 import styles from './Contact.module.css'
 import { Button } from '../ui/Button'
 
-const EMAILJS_SERVICE_ID = 'service_uun5ynr'
-const EMAILJS_TEMPLATE_ID = 'template_0sorsis'
-const EMAILJS_PUBLIC_KEY = 'oXOdHgAIQagzo1054'
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = 'template_8fkox9i'
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 export function Contact() {
   const [name, setName] = useState('')
@@ -35,6 +35,14 @@ export function Contact() {
     setIsSending(true)
     setStatusType('')
     setStatus('Sending message...')
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.error('EmailJS configuration is missing')
+      setStatusType('error')
+      setStatus('Oops! Something went wrong. Please try again later.')
+      setIsSending(false)
+      return
+    }
 
     const templateParams = {
       from_name: name,
