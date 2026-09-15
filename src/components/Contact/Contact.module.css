@@ -144,16 +144,26 @@
 @media (max-width: 640px) {
   .socialLinks {
     flex-wrap: nowrap;
+    gap: 0.35rem;
   }
 
   .socialButton,
   .socialButtonContainer {
-    min-width: 0;
-    flex-shrink: 1;
+    flex-shrink: 0;
   }
 
   .socialButtonContainer .socialButton {
-    min-width: 0;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    white-space: nowrap;
+    word-break: normal;
+  }
+
+  .socialLinks > .socialButton {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    white-space: nowrap;
+    word-break: normal;
   }
 }
 
