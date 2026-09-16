@@ -231,6 +231,16 @@
     gap: 1.5rem;
   }
 
+  .heroImage {
+    width: 100%;
+    justify-self: center;
+  }
+
+  .imageFrame {
+    width: 100%;
+    max-width: min(460px, calc(100vw - 2rem));
+  }
+
   .roles {
     font-size: 16px;
   }
