@@ -45,8 +45,8 @@ export function Contact() {
     }
 
     const templateParams = {
-      from_name: name,
-      from_email: email,
+      name,
+      email,
       message,
       to_email: 'mahilalalex27@gmail.com',
     }
